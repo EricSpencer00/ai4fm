@@ -59,7 +59,7 @@ blog_languages = {
 }
 blog_default_language = "en"
 post_show_prev_next = False
-blog_title = "AI4FM Research Updates"
+blog_title = "AI4FM Updates"
 blog_feed_fulltext = True
 
 # Sphinx auto section label settings

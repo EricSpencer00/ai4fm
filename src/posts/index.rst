@@ -1,6 +1,6 @@
-#################
- Research Updates
-#################
+########
+ Updates
+########
 
 .. postlist::
    :category: Research Update

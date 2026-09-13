@@ -1,8 +1,5 @@
 {% extends "basic/layout.html" %}
 {% block extrahead %}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
 {% if pagename == 'index' %}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css">
 <script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
@@ -32,7 +29,7 @@
   <div class="header-inner">
     <a class="wordmark" href="{{ pathto('index') }}" aria-label="AI4FM home">ai4fm <span aria-hidden="true">@</span> <img src="https://pxl-lucedu.terminalfour.net/prod01/cdn/media/luc-redesign-2026/images/Loyola-University-Chicago-white.svg" alt="luc.edu" width="154" height="32"></a>
     <nav aria-label="Main navigation">
-      {% for label, page in [('Research Papers', 'papers/index'), ('Research Updates', 'posts/index'), ('Team', 'pages/people'), ('Software and Datasets', 'pages/software'), ('About', 'pages/about')] %}
+      {% for label, page in [('Publications', 'papers/index'), ('Updates', 'posts/index'), ('Team', 'pages/people'), ('Software and Datasets', 'pages/software'), ('About', 'pages/about')] %}
       <a href="{{ pathto(page) }}"{% if pagename == page or (page == 'papers/index' and pagename.startswith('papers/')) or (page == 'posts/index' and pagename.startswith('posts/')) %} aria-current="page"{% endif %}>{{ label }}</a>
       {% endfor %}
     </nav>
@@ -77,7 +74,7 @@
     </div>
   </section>
   <div class="home-columns site-width">
-    <section class="research-list" aria-labelledby="research-heading"><h2 id="research-heading">Research Papers</h2>
+    <section class="research-list" aria-labelledby="research-heading"><h2 id="research-heading">Publications</h2>
       {% for paper in research_pages[:5] %}
       <article class="research-entry">
         {% if paper.status %}<p class="entry-meta">{{ paper.status }}{% if paper.venue %} · {{ paper.venue }}{% endif %}</p>{% endif %}
@@ -87,7 +84,7 @@
       {% endfor %}
       <a class="read-more" href="{{ pathto('papers/index') }}">Read more <span aria-hidden="true">›</span></a>
     </section>
-    <section class="news-list" aria-labelledby="news-heading"><h2 id="news-heading">Research Updates</h2>
+    <section class="news-list" aria-labelledby="news-heading"><h2 id="news-heading">Updates</h2>
       {% for post in news_pages[:7] %}
       <article class="news-entry"><time datetime="{{ post.iso_date }}">{{ post.date }}</time><h3><a href="{{ pathto(post.docname) }}">{{ post.title }}</a></h3></article>
       {% endfor %}
@@ -108,7 +105,7 @@
 {% else %}
 <div class="page-layout site-width">
   <main role="main" id="main" class="article-body">
-    <div class="breadcrumbs"><a href="{{ pathto('index') }}">ai4fm</a><span aria-hidden="true"> / </span>{% if pagename.startswith('papers/') and pagename != 'papers/index' %}<a href="{{ pathto('papers/index') }}">Research Papers</a>{% elif pagename.startswith('posts/') and pagename != 'posts/index' %}<a href="{{ pathto('posts/index') }}">Research Updates</a>{% else %}<span>{{ title|striptags }}</span>{% endif %}</div>
+    <div class="breadcrumbs"><a href="{{ pathto('index') }}">ai4fm</a><span aria-hidden="true"> / </span>{% if pagename.startswith('papers/') and pagename != 'papers/index' %}<a href="{{ pathto('papers/index') }}">Publications</a>{% elif pagename.startswith('posts/') and pagename != 'posts/index' %}<a href="{{ pathto('posts/index') }}">Updates</a>{% else %}<span>{{ title|striptags }}</span>{% endif %}</div>
     {% block body %}{{ body }}{% endblock %}
   </main>
   {% if display_toc and pagename != 'search' %}<aside class="page-toc" aria-label="On this page">{{ toc }}</aside>{% endif %}

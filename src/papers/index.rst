@@ -1,5 +1,5 @@
-Research Papers
-===============
+Publications
+============
 
 Research outputs from the AI4FM group at Loyola University Chicago.
 
