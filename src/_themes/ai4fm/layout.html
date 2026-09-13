@@ -1,0 +1,59 @@
+{% extends "basic/layout.html" %}
+{% block extrahead %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
+{% endblock %}
+{% block body_tag %}<body class="{% if pagename == 'index' %}homepage{% else %}inner-page{% if pagename == 'pages/people' %} team-page{% endif %}{% endif %}">{% endblock %}
+{% block header %}
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="wordmark" href="{{ pathto('index') }}">ai4fm <span>@ luc.edu</span></a>
+    <nav aria-label="Main navigation">
+      {% for label, page in [('Research Papers', 'papers/index'), ('Research Updates', 'posts/index'), ('Team', 'pages/people'), ('Software and Datasets', 'pages/software'), ('About', 'pages/about'), ('Get Involved', 'pages/prospective-students')] %}
+      <a href="{{ pathto(page) }}"{% if pagename == page or (page == 'papers/index' and pagename.startswith('papers/')) or (page == 'posts/index' and pagename.startswith('posts/')) %} aria-current="page"{% endif %}>{{ label }}</a>
+      {% endfor %}
+      <a href="{{ pathto('search') }}"{% if pagename == 'search' %} aria-current="page"{% endif %}>Search</a>
+    </nav>
+  </div>
+</header>
+{% endblock %}
+{% block relbar1 %}{% endblock %}
+{% block relbar2 %}{% endblock %}
+{% block content %}
+{% if pagename == 'index' %}
+<main role="main" id="main" class="home-main">
+  <section class="home-hero">
+    <div class="hero-inner"><h1>AI for Formal Methods</h1><img src="{{ pathto('_static/images/PXL_20260511_164300028.jpg', 1) }}" alt="AI4FM researchers and students at a research event" width="4080" height="3072"></div>
+  </section>
+  <div class="home-columns site-width">
+    <section class="research-list" aria-labelledby="research-heading"><h2 id="research-heading">Research Papers</h2>
+      {% for paper in research_pages %}
+      <article class="research-entry">
+        {% if paper.status %}<p class="entry-meta">{{ paper.status }}{% if paper.venue %} · {{ paper.venue }}{% endif %}</p>{% endif %}
+        <h3><a href="{{ pathto(paper.docname) }}">{{ paper.title }}</a></h3>
+        {% if paper.authors %}<p class="entry-authors">{{ paper.authors }}</p>{% endif %}
+      </article>
+      {% endfor %}
+    </section>
+    <section class="news-list" aria-labelledby="news-heading"><h2 id="news-heading">Research Updates</h2>
+      {% for post in news_pages %}
+      <article class="news-entry"><time datetime="{{ post.iso_date }}">{{ post.date }}</time><h3><a href="{{ pathto(post.docname) }}">{{ post.title }}</a></h3></article>
+      {% endfor %}
+    </section>
+  </div>
+</main>
+{% else %}
+<div class="page-layout site-width">
+  <main role="main" id="main" class="article-body">
+    <div class="breadcrumbs"><a href="{{ pathto('index') }}">ai4fm</a><span aria-hidden="true"> / </span>{% if pagename.startswith('papers/') and pagename != 'papers/index' %}<a href="{{ pathto('papers/index') }}">Research Papers</a>{% elif pagename.startswith('posts/') and pagename != 'posts/index' %}<a href="{{ pathto('posts/index') }}">Research Updates</a>{% else %}<span>{{ title|striptags }}</span>{% endif %}</div>
+    {% block body %}{{ body }}{% endblock %}
+  </main>
+  {% if display_toc and pagename != 'search' %}<aside class="page-toc" aria-label="On this page">{{ toc }}</aside>{% endif %}
+</div>
+{% endif %}
+{% endblock %}
+{% block footer %}
+<footer class="site-footer"><div class="footer-inner site-width"><a class="footer-logo" href="{{ pathto('index') }}" aria-label="AI4FM home"><img src="{{ pathto('_static/images/logo-dark.png', 1) }}" alt="AI4FM" width="1080" height="1080"></a><nav aria-label="Footer"><a href="https://www.luc.edu/">Loyola University Chicago</a><a href="{{ pathto('pages/funding') }}">Funding</a><a href="https://github.com/LUC-AI4FM">GitHub</a></nav></div></footer>
+{% endblock %}

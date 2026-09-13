@@ -95,7 +95,7 @@ Relationship to Prior Work
 --------------------------
 
 This paper extends the findings of our evaluation study
-`Can LLMs Write Correct TLA+ Specifications? <llm-tla-evaluation/>`__,
+:doc:`Can LLMs Write Correct TLA+ Specifications? </papers/llm-tla-evaluation>`,
 which established the 8.6% semantic correctness baseline across 25 LLMs. TLA-Prover
 demonstrates that targeted fine-tuning with verifiable reward signals can close much
 of that gap.

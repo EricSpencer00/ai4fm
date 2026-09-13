@@ -22,13 +22,13 @@ synthesis, extending the discussion to practical generation and verification pip
 Based On
 --------
 
-This presentation builds on the paper `Can LLMs Write Correct TLA+ Specifications? Evaluating Natural-Language-to-TLA+ Generation <../llm-tla-evaluation/>`__, currently under submission.
+This presentation builds on the paper :doc:`Can LLMs Write Correct TLA+ Specifications? Evaluating Natural-Language-to-TLA+ Generation </papers/llm-tla-evaluation>`, currently under submission.
 
 
 Presentation
 ------------
 
-`View the presentation (PDF) <../_static/ChatTLA-presentation-2026.pdf>`__
+:download:`View the presentation (PDF) </_static/ChatTLA-presentation-2026.pdf>`
 
 
 Citation

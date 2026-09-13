@@ -69,8 +69,8 @@ Try it
 .. raw:: html
 
    <div id="microwave-root" style="min-height: 560px;"></div>
-   <link rel="stylesheet" href="../_static/demos/microwave/assets/index.css" />
-   <script type="module" src="../_static/demos/microwave/assets/index.js"></script>
+   <link rel="stylesheet" href="../../_static/demos/microwave/assets/index.css" />
+   <script type="module" src="../../_static/demos/microwave/assets/index.js"></script>
 
 Reproduce the paper's Figure 7 by pressing **Power**, **+3s**, **Start**, and
 then turning off **Weak fairness on Tick**. The ``Tick`` action stops firing,

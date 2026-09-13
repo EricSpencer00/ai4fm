@@ -22,6 +22,6 @@ The presentation covers how LLMs can be applied to TLA+ formal specification gen
 and verification, building on the group's ongoing research into evaluating LLMs on formal
 language tasks.
 
-`View the presentation (PDF) <../../_static/ChatTLA-presentation-2026.pdf>`__
+:download:`View the presentation (PDF) </_static/ChatTLA-presentation-2026.pdf>`
 
 `Read the full details <../../papers/chattla-2026/>`__

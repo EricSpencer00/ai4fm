@@ -29,7 +29,7 @@ language training.
 Based On
 --------
 
-This poster is based on the paper `Can LLMs Write Correct TLA+ Specifications? Evaluating Natural-Language-to-TLA+ Generation <llm-tla-evaluation/>`__, currently under submission.
+This poster is based on the paper :doc:`Can LLMs Write Correct TLA+ Specifications? Evaluating Natural-Language-to-TLA+ Generation </papers/llm-tla-evaluation>`, currently under submission.
 
 
 Citation

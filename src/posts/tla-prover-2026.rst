@@ -8,7 +8,7 @@
 New Paper: TLA-Prover — Fine-Tuning LLMs for Verifiable TLA+ Specification Synthesis
 ======================================================================================
 
-Building on our `evaluation study <../llm-tla-evaluation-2025/>`__ that showed the best public LLMs
+Building on our :doc:`evaluation study </posts/llm-tla-evaluation-2025>` that showed the best public LLMs
 achieve only 8.6% semantic correctness on TLA+ specification generation, we present
 **TLA-Prover**: a 20-billion-parameter model trained specifically for TLA+ specification synthesis.
 
