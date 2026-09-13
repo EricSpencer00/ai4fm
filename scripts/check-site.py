@@ -200,18 +200,21 @@ else:
             errors.append("Homepage JSON-LD should describe an organization")
         if organization.get("name") != "AI4FM" or organization.get("url") != SITE_URL:
             errors.append("Homepage JSON-LD has an incorrect identity")
-home_targets = {
-    (build / urlsplit(link).path).resolve()
-    for link in home.links
-    if not urlsplit(link).scheme
-}
+home_targets = set()
+for link in home.links:
+    url = urlsplit(link)
+    if url.scheme:
+        continue
+    target = (build / url.path).resolve()
+    home_targets.add(target / "index.html" if target.is_dir() else target)
 counts = {}
 for section in ("papers", "posts"):
     sources = [p for p in (root / "src" / section).glob("*.rst") if p.stem != "index"]
     counts[section] = len(sources)
+    section_index = (build / section / "index.html").resolve()
     for source in sources:
         target = (build / section / source.stem).resolve()
-        if target not in home_targets:
+        if target not in home_targets and section_index not in home_targets:
             errors.append(f"Homepage is missing {section}/{source.stem}")
         if (target / "index.html") not in pages:
             errors.append(f"Missing dedicated page: {section}/{source.stem}")
