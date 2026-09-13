@@ -4,6 +4,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
 {% if pagename == 'index' %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script defer src="{{ pathto('_static/js/home-carousel.js', 1) }}"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -27,12 +30,11 @@
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="wordmark" href="{{ pathto('index') }}">ai4fm <span>@ luc.edu</span></a>
+    <a class="wordmark" href="{{ pathto('index') }}" aria-label="AI4FM home">ai4fm <span aria-hidden="true">@</span> <img src="https://pxl-lucedu.terminalfour.net/prod01/cdn/media/luc-redesign-2026/images/Loyola-University-Chicago-white.svg" alt="luc.edu" width="154" height="32"></a>
     <nav aria-label="Main navigation">
       {% for label, page in [('Research Papers', 'papers/index'), ('Research Updates', 'posts/index'), ('Team', 'pages/people'), ('Software and Datasets', 'pages/software'), ('About', 'pages/about'), ('Get Involved', 'pages/prospective-students')] %}
       <a href="{{ pathto(page) }}"{% if pagename == page or (page == 'papers/index' and pagename.startswith('papers/')) or (page == 'posts/index' and pagename.startswith('posts/')) %} aria-current="page"{% endif %}>{{ label }}</a>
       {% endfor %}
-      <a href="{{ pathto('search') }}"{% if pagename == 'search' %} aria-current="page"{% endif %}>Search</a>
     </nav>
   </div>
 </header>
@@ -43,7 +45,27 @@
 {% if pagename == 'index' %}
 <main role="main" id="main" class="home-main">
   <section class="home-hero">
-    <div class="hero-inner"><div class="hero-copy"><h1>AI for Formal Methods</h1><p class="hero-dek">Loyola University Chicago's lab for studying artificial intelligence with formal methods. Est. 2025.</p></div><div class="hero-photo-roll" role="img" aria-label="Rotating photos of AI4FM researchers and students at research events"><img src="{{ pathto('_static/images/PXL_20260511_164300028.jpg', 1) }}" alt="" width="4080" height="3072"><img src="{{ pathto('_static/images/PXL_20260511_152740012.jpg', 1) }}" alt="" width="1283" height="966"><img src="{{ pathto('_static/images/Image.jpeg', 1) }}" alt="" width="5712" height="4284"></div></div>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1>AI for Formal Methods</h1>
+        <p class="hero-dek">Loyola University Chicago’s research lab exploring the intersection of artificial intelligence and formal methods in software engineering. Established 2025.</p>
+      </div>
+      <section class="hero-carousel splide" aria-hidden="true">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img src="{{ pathto('_static/images/PXL_20260511_164300028.jpg', 1) }}" alt="" width="4080" height="3072" fetchpriority="high">
+            </li>
+            <li class="splide__slide">
+              <img src="{{ pathto('_static/images/PXL_20260511_152740012.jpg', 1) }}" alt="" width="1283" height="966" loading="lazy">
+            </li>
+            <li class="splide__slide">
+              <img src="{{ pathto('_static/images/Image.jpeg', 1) }}" alt="" width="5712" height="4284" loading="lazy">
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
   </section>
   <div class="home-columns site-width">
     <section class="research-list" aria-labelledby="research-heading"><h2 id="research-heading">Research Papers</h2>

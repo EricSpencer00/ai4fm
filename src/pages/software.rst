@@ -132,14 +132,24 @@ Data Pipelines and Evaluation
    .. grid-item-card::
       :margin: 0
 
-      :octicon:`checklist;1em;sd-text-primary` **tla_benchmark**
+      :octicon:`checklist;1em;sd-text-primary` **TLA+-Bench**
 
-      The evaluation harness behind our LLM benchmarking work. Extracts real
-      SANY-parsed ASTs, runs specifications through ``tla2tools``, and scores them on
-      syntactic and semantic correctness alongside code-quality metrics. Includes a
-      dashboard for reviewing runs.
+      The execution-grounded benchmark and dataset behind our natural-language-to-TLA+
+      research. Its public reviewer release includes 1,300 specifications, a
+      reproducible grader, and 403 TLC-model-checked gold specifications.
 
-      `Repository <https://github.com/LUC-AI4FM/tla_benchmark>`__
+      :doc:`Paper <../papers/tla-bench>` | `Repository and artifact <https://github.com/LUC-AI4FM/tla_benchmark/tree/reviewer-release>`__
+
+   .. grid-item-card::
+      :margin: 0
+
+      :octicon:`tools;1em;sd-text-primary` **TLAKit**
+
+      TLA+ tools for Python, Jupyter notebooks, and CI. TLAKit uses the official
+      TLA+ tools to run checks, inspect counterexamples, and work with specifications
+      from a notebook or command line.
+
+      `Repository <https://github.com/LUC-AI4FM/tlakit>`__ | `Notebook site <https://tlakit.pages.dev/>`__ | `Public checker <https://tla-runner.ericspencer.us/>`__
 
 
 Generation Pipelines
@@ -147,6 +157,17 @@ Generation Pipelines
 
 .. grid:: 1
    :gutter: 3
+
+   .. grid-item-card::
+      :margin: 0
+
+      :octicon:`cpu;1em;sd-text-primary` **TLA+ Specification Generator**
+
+      A hosted research prototype for generating a TLA+ specification from a system
+      description. Returned candidates are checked with SANY and TLC before being
+      surfaced for review. An access key is required to generate specifications.
+
+      `Open prototype <https://tla.ericspencer.us/>`__ | `Project site <https://luc-ai4fm.github.io/tla-generator/>`__
 
    .. grid-item-card::
       :margin: 0

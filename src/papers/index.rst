@@ -13,6 +13,22 @@ Research outputs from the AI4FM group at Loyola University Chicago.
          .. grid-item-card::
             :margin: 0
 
+            :octicon:`database;1em;sd-text-primary` **TLA+-Bench: An Execution-Grounded Benchmark and Dataset for Natural-Language to TLA+ Specification Generation**
+
+            *Preprint / under review, July 2026*
+
+            An execution-grounded benchmark for natural-language-to-TLA+ generation:
+            1,300 specifications, including 403 TLC-model-checked gold specifications,
+            with a reproducible grader and research artifact.
+
+            .. button-link:: tla-bench/
+               :color: primary
+
+               Full Details
+
+         .. grid-item-card::
+            :margin: 0
+
             :octicon:`beaker;1em;sd-text-primary` **TLA-Prover: Verifiable TLA+ Specification Synthesis via Preference-Optimized Low-Rank Adaptation**
 
             *Published in ICSOFT 2026, pp. 627–636*

@@ -9,49 +9,71 @@ a:visited{color:var(--maroon)}.site-header .wordmark:visited,.site-header nav a:
 
 .hero-inner img{width:auto;max-width:100%;object-fit:contain;justify-self:end}@media(max-width:520px){.hero-inner img{width:100%}}
 
-.hero-copy { align-self: center; }
+.home-hero { overflow: hidden; }
+.hero-inner {
+  grid-template-columns: minmax(0, 1.18fr) minmax(300px, .82fr);
+  gap: 4%;
+  padding: 25px 0 42px;
+}
+.hero-copy { align-self: center; max-width: 620px; }
+.hero-inner h1 {
+  max-width: none;
+  margin: 0;
+  color: var(--paper);
+  font-size: clamp(34px, 3.65vw, 52px);
+  font-weight: 500;
+  letter-spacing: -.055em;
+  line-height: 1;
+  white-space: nowrap;
+}
 .home-hero .hero-dek {
-  max-width: 34ch;
+  max-width: 52ch;
   margin: 18px 0 0;
   color: oklch(.93 .008 85);
-  font-size: 14px;
-  line-height: 1.65;
+  font-family: var(--serif);
+  font-size: clamp(16px, 1.3vw, 19px);
+  line-height: 1.45;
 }
-
-.hero-photo-roll {
+.hero-carousel {
   position: relative;
-  width: auto;
-  height: 265px;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  justify-self: end;
-}
-.hero-photo-roll img {
-  position: absolute;
-  inset: 0;
-  width: 100% !important;
-  height: 100% !important;
+  width: calc(100% + 17vw);
   max-width: none;
+  justify-self: start;
+  transform: translateX(-8vw);
+}
+.hero-carousel:not(.is-initialized) .splide__slide:not(:first-child) { display: none; }
+.hero-carousel .splide__track { overflow: hidden; }
+.hero-carousel img {
+  display: block;
+  width: 100% !important;
+  max-width: none;
+  height: 265px !important;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   object-position: center;
-  opacity: 0;
-  animation: hero-photo-roll 18s ease-in-out infinite;
 }
-.hero-photo-roll img:nth-child(2) { animation-delay: 6s; }
-.hero-photo-roll img:nth-child(3) { animation-delay: 12s; }
-@keyframes hero-photo-roll {
-  0%, 27% { opacity: 1; }
-  33%, 100% { opacity: 0; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .hero-photo-roll img { opacity: 0; }
-  .hero-photo-roll img:first-child { opacity: 1; }
+
+.wordmark { display: flex; align-items: center; gap: 8px; }
+.wordmark span { letter-spacing: 0; }
+.wordmark img {
+  display: block;
+  width: 154px;
+  height: 32px;
+  object-fit: contain;
+  object-position: left center;
 }
 @media (max-width: 800px) {
-  .hero-photo-roll { height: 220px; }
+  .hero-inner { grid-template-columns: 1fr 1fr; gap: 4%; padding: 20px 0 34px; }
+  .hero-inner h1 { font-size: clamp(30px, 4.2vw, 38px); }
+  .hero-carousel { max-width: none; transform: translateX(-5vw); }
+  .hero-carousel img { height: 220px !important; }
 }
 @media (max-width: 520px) {
-  .hero-photo-roll { width: 100%; height: auto; }
+  .hero-inner { gap: 23px; padding: 22px 0 30px; }
+  .hero-inner h1 { font-size: clamp(29px, 8.6vw, 36px); }
+  .home-hero .hero-dek { max-width: 42ch; }
+  .hero-carousel { width: 100%; transform: none; }
+  .hero-carousel img { height: auto !important; }
 }
 
 /* Square frames use the original portrait assets without resizing the source files. */
