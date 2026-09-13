@@ -32,7 +32,7 @@
   <div class="header-inner">
     <a class="wordmark" href="{{ pathto('index') }}" aria-label="AI4FM home">ai4fm <span aria-hidden="true">@</span> <img src="https://pxl-lucedu.terminalfour.net/prod01/cdn/media/luc-redesign-2026/images/Loyola-University-Chicago-white.svg" alt="luc.edu" width="154" height="32"></a>
     <nav aria-label="Main navigation">
-      {% for label, page in [('Research Papers', 'papers/index'), ('Research Updates', 'posts/index'), ('Team', 'pages/people'), ('Software and Datasets', 'pages/software'), ('About', 'pages/about'), ('Get Involved', 'pages/prospective-students')] %}
+      {% for label, page in [('Research Papers', 'papers/index'), ('Research Updates', 'posts/index'), ('Team', 'pages/people'), ('Software and Datasets', 'pages/software'), ('About', 'pages/about')] %}
       <a href="{{ pathto(page) }}"{% if pagename == page or (page == 'papers/index' and pagename.startswith('papers/')) or (page == 'posts/index' and pagename.startswith('posts/')) %} aria-current="page"{% endif %}>{{ label }}</a>
       {% endfor %}
     </nav>
@@ -62,6 +62,9 @@
             <li class="splide__slide">
               <img src="{{ pathto('_static/images/Image.jpeg', 1) }}" alt="" width="5712" height="4284" loading="lazy">
             </li>
+            <li class="splide__slide">
+              <img src="{{ pathto('_static/images/gcasr-2025-brian-poster.jpeg', 1) }}" alt="" width="1024" height="771" loading="lazy">
+            </li>
           </ul>
         </div>
       </section>
@@ -69,18 +72,30 @@
   </section>
   <div class="home-columns site-width">
     <section class="research-list" aria-labelledby="research-heading"><h2 id="research-heading">Research Papers</h2>
-      {% for paper in research_pages %}
+      {% for paper in research_pages[:5] %}
       <article class="research-entry">
         {% if paper.status %}<p class="entry-meta">{{ paper.status }}{% if paper.venue %} · {{ paper.venue }}{% endif %}</p>{% endif %}
         <h3><a href="{{ pathto(paper.docname) }}">{{ paper.title }}</a></h3>
         {% if paper.authors %}<p class="entry-authors">{{ paper.authors }}</p>{% endif %}
       </article>
       {% endfor %}
+      <a class="read-more" href="{{ pathto('papers/index') }}">Read more <span aria-hidden="true">›</span></a>
     </section>
     <section class="news-list" aria-labelledby="news-heading"><h2 id="news-heading">Research Updates</h2>
-      {% for post in news_pages %}
+      {% for post in news_pages[:7] %}
       <article class="news-entry"><time datetime="{{ post.iso_date }}">{{ post.date }}</time><h3><a href="{{ pathto(post.docname) }}">{{ post.title }}</a></h3></article>
       {% endfor %}
+      <a class="read-more" href="{{ pathto('posts/index') }}">Read more <span aria-hidden="true">›</span></a>
+    </section>
+  </div>
+  <div class="home-bottom site-width">
+    <section class="home-bottom-entry">
+      <h2><a href="{{ pathto('pages/about') }}">About</a></h2>
+      <p>Meet the lab, our research focus, and the Loyola community behind AI4FM.</p>
+    </section>
+    <section class="home-bottom-entry">
+      <h2><a href="{{ pathto('pages/prospective-students') }}">Get Involved</a></h2>
+      <p>Find ways to contribute, collaborate, or join us as a student researcher.</p>
     </section>
   </div>
 </main>
