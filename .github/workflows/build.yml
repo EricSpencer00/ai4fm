@@ -43,13 +43,10 @@ jobs:
           python3 -m pip install uv && \
           python3 -m uv sync
 
-      - name: Build the site
+      - name: Build and verify the site
         run: |
-          ./.venv/bin/sphinx-build -b dirhtml --write-all src build
-
-      - name: Verify sitemap
-        run: |
-          test -f build/sitemap.xml && echo "sitemap.xml generated OK" || echo "WARNING: sitemap.xml missing"
+          ./.venv/bin/sphinx-build -b dirhtml -W --keep-going --write-all src build
+          ./.venv/bin/python scripts/check-site.py
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

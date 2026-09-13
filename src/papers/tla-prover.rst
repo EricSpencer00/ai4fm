@@ -1,10 +1,11 @@
 TLA-Prover: Verifiable TLA+ Specification Synthesis via Preference-Optimized Low-Rank Adaptation
 =================================================================================================
 
-:Status: Accepted
-:Venue: ICSOFT 2026 - International Conference on Software Technologies, Porto, Portugal
-:Authors: AI4FM, Loyola University Chicago
-:DOI / PDF: Available upon publication
+:Status: Published
+:Venue: ICSOFT 2026 — 21st International Conference on Software Technologies, Porto, Portugal, July 16–18, 2026, pp. 627–636
+:Authors: Eric Spencer, Arslan Bisharat, Brian Ortiz, Mujtaba Nazari, Khushboo Bhadauria, TaiNing Wang, George K. Thiruvathukal, Konstantin Läufer, Mohammed Abuhamad
+:DOI / PDF: `10.5220/0015234600004088 <https://doi.org/10.5220/0015234600004088>`__ | `View published PDF <https://www.scitepress.org/PublishedPapers/2026/152346/152346.pdf>`__
+:Google Scholar: `Citation record <https://scholar.google.com/scholar?cites=10942189414547579135&as_sdt=400005&sciodt=0,14&hl=en>`__
 
 
 Abstract
@@ -104,5 +105,9 @@ of that gap.
 Citation
 --------
 
-.. note::
-   The paper has been accepted at ICSOFT 2026. Full citation will be available upon publication.
+Eric Spencer, Arslan Bisharat, Brian Ortiz, Mujtaba Nazari, Khushboo Bhadauria,
+TaiNing Wang, George K. Thiruvathukal, Konstantin Läufer, and Mohammed Abuhamad,
+*TLA-Prover: Verifiable TLA+ Specification Synthesis via Preference-Optimized
+Low-Rank Adaptation*, Proceedings of the 21st International Conference on Software
+Technologies (ICSOFT 2026), pp. 627–636, 2026.
+https://doi.org/10.5220/0015234600004088

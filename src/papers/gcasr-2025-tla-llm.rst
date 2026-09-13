@@ -7,7 +7,7 @@ Automating TLA+ Model Synthesis with Large Language Models and Formal Verificati
 :Venue: GCASR 2025 - 12th Greater Chicago Area Systems Research Workshop, May 8, 2025, Loyola University Chicago
 :Authors: Brian Ortiz, Mohammed Abuhamad, TaiNing Wang, George K. Thiruvathukal, Konstantin Läufer
 :Institution: Loyola University Chicago
-:DOI / Poster: `10.6084/m9.figshare.31896151 <https://doi.org/10.6084/m9.figshare.31896151>`__
+:DOI / Poster: `10.6084/m9.figshare.31896151.v3 <https://doi.org/10.6084/m9.figshare.31896151.v3>`__
 
 
 Abstract
@@ -35,4 +35,4 @@ Citation
 Brian Ortiz, Mohammed Abuhamad, TaiNing Wang, George K. Thiruvathukal, and Konstantin Läufer,
 *Automating TLA+ Model Synthesis with Large Language Models and Formal Verification Pipelines (WIP)*,
 GCASR 2025, May 8, 2025.
-https://doi.org/10.6084/m9.figshare.31896151
+https://doi.org/10.6084/m9.figshare.31896151.v3

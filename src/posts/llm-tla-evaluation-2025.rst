@@ -16,4 +16,5 @@ was only 8.6%, and model size did not predict quality.
 `Read the full paper details <../../papers/llm-tla-evaluation/>`__
 
 .. note::
-   This paper has been accepted. See the `acceptance announcement <../llm-tla-accepted-2026/>`__.
+   This work is now published in ICSOFT 2026. See the `published paper
+   <../../papers/llm-tla-evaluation/>`__.

@@ -36,7 +36,14 @@ The root `index.html` opens the generated homepage after a build. Use `make serv
 make check-site
 ```
 
-This builds with warnings treated as errors and checks generated internal links, shared page structure, and complete homepage coverage of papers and news.
+This builds with warnings treated as errors and checks generated internal links and
+anchors, copied visual assets, shared page structure, and complete homepage coverage
+of papers and news.
+
+SEO metadata, canonical URLs, the sitemap, and `robots.txt` are generated with the
+site. The check also confirms that every public source page is represented exactly
+once in the sitemap and has one concise description; the CI deployment uses the
+same check before publishing.
 
 ## Deployment
 

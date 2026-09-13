@@ -24,7 +24,7 @@ Models and Fine-Tuning
       :octicon:`cpu;1em;sd-text-primary` **TLA-Prove (ChatTLA)**
 
       The training and evaluation code behind :doc:`TLA-Prover <../papers/tla-prover>`,
-      accepted at ICSOFT 2026. The distinguishing choice is the training metric: success
+      published at ICSOFT 2026. The distinguishing choice is the training metric: success
       is measured by whether a generated specification passes the TLC model checker, not
       by perplexity. The resulting 20B model is derived from ``openai/gpt-oss-20b`` and
       released under Apache 2.0.
@@ -159,16 +159,6 @@ Generation Pipelines
       backends and prompting strategies can be compared under identical conditions.
 
       `Repository <https://github.com/LUC-AI4FM/FormaLLM>`__
-
-   .. grid-item-card::
-      :margin: 0
-
-      :octicon:`arrow-switch;1em;sd-text-primary` **FormaLLM-Reverse**
-
-      The companion to FormaLLM, exploring the opposite direction: recovering readable
-      natural-language documentation from existing formal models.
-
-      `Repository <https://github.com/LUC-AI4FM/FormaLLM-Reverse>`__
 
    .. grid-item-card::
       :margin: 0

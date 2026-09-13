@@ -9,6 +9,51 @@ a:visited{color:var(--maroon)}.site-header .wordmark:visited,.site-header nav a:
 
 .hero-inner img{width:auto;max-width:100%;object-fit:contain;justify-self:end}@media(max-width:520px){.hero-inner img{width:100%}}
 
+.hero-copy { align-self: center; }
+.home-hero .hero-dek {
+  max-width: 34ch;
+  margin: 18px 0 0;
+  color: oklch(.93 .008 85);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.hero-photo-roll {
+  position: relative;
+  width: auto;
+  height: 265px;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  justify-self: end;
+}
+.hero-photo-roll img {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  animation: hero-photo-roll 18s ease-in-out infinite;
+}
+.hero-photo-roll img:nth-child(2) { animation-delay: 6s; }
+.hero-photo-roll img:nth-child(3) { animation-delay: 12s; }
+@keyframes hero-photo-roll {
+  0%, 27% { opacity: 1; }
+  33%, 100% { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-photo-roll img { opacity: 0; }
+  .hero-photo-roll img:first-child { opacity: 1; }
+}
+@media (max-width: 800px) {
+  .hero-photo-roll { height: 220px; }
+}
+@media (max-width: 520px) {
+  .hero-photo-roll { width: 100%; height: auto; }
+}
+
 /* Square frames use the original portrait assets without resizing the source files. */
 .article-body img.profile-photo,
 .article-body img.sd-card-img-top {

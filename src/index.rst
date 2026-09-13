@@ -5,12 +5,6 @@ AI for Formal Methods
    :hidden:
 
    pages/index
-   pages/people
-   pages/software
-   pages/funding
-   pages/prospective-students
-   papers/index
-   posts/index
 
 .. toctree::
    :hidden:
