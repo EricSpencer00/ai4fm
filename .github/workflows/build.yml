@@ -44,6 +44,8 @@ jobs:
           python3 -m uv sync
 
       - name: Build and verify the site
+        env:
+          AI4FM_BASE_URL: https://ericspencer.us/ai4fm/
         run: |
           ./.venv/bin/sphinx-build -b dirhtml -W --keep-going --write-all src build
           ./.venv/bin/python scripts/check-site.py
