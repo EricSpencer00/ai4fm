@@ -48,6 +48,7 @@ jobs:
           AI4FM_BASE_URL: https://ericspencer.us/ai4fm/
         run: |
           ./.venv/bin/sphinx-build -b dirhtml -W --keep-going --write-all src build
+          sed -i 's#https://ai4fm.cs.luc.edu/#https://ericspencer.us/ai4fm/#g' build/robots.txt
           ./.venv/bin/python scripts/check-site.py
 
       - name: Upload artifact
