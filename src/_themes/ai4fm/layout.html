@@ -1,5 +1,9 @@
 {% extends "basic/layout.html" %}
 {% block extrahead %}
+<link rel="stylesheet" href="https://www.luc.edu/media/lucedu/styleassets/antenna-terminal-four.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap">
 {% if pagename == 'index' %}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css">
 <script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
@@ -51,22 +55,13 @@
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide">
-              <img src="{{ pathto('_static/images/PXL_20260511_164300028.jpg', 1) }}" alt="" width="4080" height="3072" fetchpriority="high">
+              <img src="{{ pathto('_static/images/gsirs-2026-brian-poster.png', 1) }}" alt="" width="600" height="800" fetchpriority="high">
             </li>
             <li class="splide__slide">
-              <img src="{{ pathto('_static/images/PXL_20260511_152740012.jpg', 1) }}" alt="" width="1283" height="966" loading="lazy">
-            </li>
-            <li class="splide__slide">
-              <img src="{{ pathto('_static/images/Image.jpeg', 1) }}" alt="" width="5712" height="4284" loading="lazy">
+              <img src="{{ pathto('_static/images/eric-chattla-presentation-2026.png', 1) }}" alt="" width="740" height="968" loading="lazy">
             </li>
             <li class="splide__slide">
               <img src="{{ pathto('_static/images/gcasr-2025-brian-poster.jpeg', 1) }}" alt="" width="1024" height="771" loading="lazy">
-            </li>
-            <li class="splide__slide">
-              <img src="{{ pathto('_static/images/people/laufer.jpg', 1) }}" alt="" width="3648" height="2736" loading="lazy">
-            </li>
-            <li class="splide__slide">
-              <img src="{{ pathto('_static/images/people/thiruvathukal.png', 1) }}" alt="" width="3600" height="2880" loading="lazy">
             </li>
           </ul>
         </div>

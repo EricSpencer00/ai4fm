@@ -26,7 +26,7 @@ Use Sphinx `:doc:` links for internal pages and `:download:` links for downloada
 
 ## Design
 
-`src/_themes/ai4fm/` contains the shared layout and stylesheet. The theme uses the selected maroon-and-paper design, the compact `ai4fm @ luc.edu` header, Source Serif 4 and Libre Franklin, and 100 ms hover feedback. Reduced-motion preferences disable transitions. Fonts have local fallbacks.
+`src/_themes/ai4fm/` contains the shared layout and stylesheet. The theme uses the selected maroon-and-paper design, the compact `ai4fm @ luc.edu` header, the Computer Science site's Open Sans and Antenna heading stack, and 100 ms hover feedback. Reduced-motion preferences disable transitions. Fonts have local fallbacks.
 
 The root `index.html` opens the generated homepage after a build. Use `make serve` to browse the complete site locally.
 
