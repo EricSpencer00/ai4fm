@@ -4,236 +4,196 @@ Team
 The AI4FM research group brings together faculty and students from Loyola University Chicago's
 `Department of Computer Science <https://www.luc.edu/cs/>`__.
 
-Faculty
--------
 
-.. grid:: 1
-   :gutter: 3
+.. grid:: 1 2 3 3
+   :gutter: 4
 
    .. grid-item-card::
       :margin: 0
       :class-card: team-card
 
-      .. grid:: 1 2 2 2
-         :gutter: 0
+      .. image:: ../_static/images/people/abuhamad.jpg
+         :alt: Mohammed Abuhamad
+         :class: profile-photo
+         :width: 200px
 
-         .. grid-item::
-            :columns: 12 3 3 3
-            :class: team-photo-col
+      **Mohammed Abuhamad**
 
-            .. image:: ../_static/images/people/abuhamad.jpg
-               :alt: Mohammed Abuhamad
-               :class: profile-photo
-               :width: 100%
+      *Assistant Professor of Computer Science, Loyola University Chicago*
 
-         .. grid-item::
-            :columns: 12 9 9 9
-            :class: team-text-col
+      Directs the AI for Secure Computing Lab (AISeC). Research covers information
+      security, adversarial ML, IoT security, and deep learning for authentication.
+      Published at ACM CCS, IEEE TDSC, IEEE TIFS, and IEEE ICDCS.
 
-            **Mohammed Abuhamad**
-
-            *Assistant Professor of Computer Science, Loyola University Chicago*
-
-            Directs the AI for Secure Computing Lab (AISeC). Research covers information
-            security, adversarial ML, IoT security, and deep learning for authentication.
-            Published at ACM CCS, IEEE TDSC, IEEE TIFS, and IEEE ICDCS.
-
-            `Website <https://abuhamad.cs.luc.edu/>`__ |
-            `Google Scholar <https://scholar.google.com/citations?user=V7FWdNoAAAAJ&hl=en>`__ |
-            `Email <mailto:mabuhamad@luc.edu>`__
+      `Website <https://abuhamad.cs.luc.edu/>`__ |
+      `Google Scholar <https://scholar.google.com/citations?user=V7FWdNoAAAAJ&hl=en>`__ |
+      `Email <mailto:mabuhamad@luc.edu>`__
 
    .. grid-item-card::
       :margin: 0
       :class-card: team-card
 
-      .. grid:: 1 2 2 2
-         :gutter: 0
+      .. image:: ../_static/images/people/laufer.jpg
+         :alt: Konstantin Laufer
+         :class: profile-photo
+         :width: 200px
 
-         .. grid-item::
-            :columns: 12 3 3 3
-            :class: team-photo-col
+      **Konstantin Laufer**
 
-            .. image:: ../_static/images/people/laufer.jpg
-               :alt: Konstantin Laufer
-               :class: profile-photo
-               :width: 100%
+      *Professor of Computer Science, Loyola University Chicago*
 
-         .. grid-item::
-            :columns: 12 9 9 9
-            :class: team-text-col
+      Research spans programming languages, software architecture, distributed systems,
+      and data engineering. PhD from the Courant Institute at NYU. Joined Loyola in 1992,
+      served as department chair 2012-2018.
 
-            **Konstantin Laufer**
-
-            *Professor of Computer Science, Loyola University Chicago*
-
-            Research spans programming languages, software architecture, distributed systems,
-            and data engineering. PhD from the Courant Institute at NYU. Joined Loyola in 1992,
-            served as department chair 2012-2018.
-
-            `Website <https://laufer.cs.luc.edu/>`__ |
-            `Google Scholar <https://scholar.google.com/citations?user=Rs0f_nMAAAAJ&hl=en>`__ |
-            `ORCID <https://orcid.org/0000-0002-7548-0876>`__ |
-            `GitHub <https://github.com/laufer>`__
+      `Website <https://laufer.cs.luc.edu/>`__ |
+      `Google Scholar <https://scholar.google.com/citations?user=Rs0f_nMAAAAJ&hl=en>`__ |
+      `ORCID <https://orcid.org/0000-0002-7548-0876>`__ |
+      `GitHub <https://github.com/laufer>`__
 
    .. grid-item-card::
       :margin: 0
       :class-card: team-card
 
-      .. grid:: 1 2 2 2
-         :gutter: 0
+      .. image:: ../_static/images/people/thiruvathukal.png
+         :alt: George K. Thiruvathukal
+         :class: profile-photo
+         :width: 200px
 
-         .. grid-item::
-            :columns: 12 3 3 3
-            :class: team-photo-col
+      **George K. Thiruvathukal**
 
-            .. image:: ../_static/images/people/thiruvathukal.png
-               :alt: George K. Thiruvathukal
-               :class: profile-photo
-               :width: 100%
+      *Professor and Chairperson, Computer Science, Loyola University Chicago*
 
-         .. grid-item::
-            :columns: 12 9 9 9
-            :class: team-text-col
+      Research spans HPC, distributed systems, software engineering, and ML.
+      Former EiC of IEEE Computing in Science and Engineering. Visiting Computer
+      Scientist at Argonne National Laboratory. Author of 200+ works.
 
-            **George K. Thiruvathukal**
-
-            *Professor and Chairperson, Computer Science, Loyola University Chicago*
-
-            Research spans HPC, distributed systems, software engineering, and ML.
-            Former EiC of IEEE Computing in Science and Engineering. Visiting Computer
-            Scientist at Argonne National Laboratory. Author of 200+ works.
-
-            `Website <https://gkt.sh/>`__ |
-            `Google Scholar <https://scholar.google.com/citations?user=Ls7yS0IAAAAJ&hl=en>`__ |
-            `GitHub <https://github.com/gkthiruvathukal>`__
+      `Website <https://gkt.sh/>`__ |
+      `Google Scholar <https://scholar.google.com/citations?user=Ls7yS0IAAAAJ&hl=en>`__ |
+      `GitHub <https://github.com/gkthiruvathukal>`__
 
    .. grid-item-card::
       :margin: 0
       :class-card: team-card
 
-      .. grid:: 1 2 2 2
-         :gutter: 0
+      .. image:: ../_static/images/people/wang.jpg
+         :alt: TaiNing Wang
+         :class: profile-photo
+         :width: 200px
 
-         .. grid-item::
-            :columns: 12 3 3 3
-            :class: team-photo-col
+      **TaiNing Wang**
 
-            .. image:: ../_static/images/people/wang.jpg
-               :alt: TaiNing Wang
-               :class: profile-photo
-               :width: 100%
+      *Assistant Professor, Computer Science, Loyola University Chicago*
 
-         .. grid-item::
-            :columns: 12 9 9 9
-            :class: team-text-col
+      Research focuses on databases, query processing, graph data, and AI accountability.
+      PhD from the National University of Singapore. Microsoft Research Asia Fellow (2019).
 
-            **TaiNing Wang**
+      `Website <https://taining.github.io/>`__ |
+      `Google Scholar <https://scholar.google.com/citations?user=LjWiPr8AAAAJ&hl=en>`__ |
+      `Email <mailto:twang12@luc.edu>`__
 
-            *Assistant Professor, Computer Science, Loyola University Chicago*
+   .. grid-item-card::
+      :margin: 0
+      :class-card: team-card
 
-            Research focuses on databases, query processing, graph data, and AI accountability.
-            PhD from the National University of Singapore. Microsoft Research Asia Fellow (2019).
+      .. image:: ../_static/images/people/bisharat.png
+         :alt: Arslan Bisharat
+         :class: profile-photo
+         :width: 200px
 
-            `Website <https://taining.github.io/>`__ |
-            `Google Scholar <https://scholar.google.com/citations?user=LjWiPr8AAAAJ&hl=en>`__ |
-            `Email <mailto:twang12@luc.edu>`__
+      **Arslan Bisharat**
 
+      *PhD Student, Computer Science, Loyola University Chicago*
 
-Students
---------
+      LLM evaluation, formal methods, adversarial ML.
 
-.. dropdown:: Show / Hide All Students
-   :open:
+      `Website <https://marslan.cs.luc.edu/>`__ |
+      `GitHub <https://github.com/arslanbisharat>`__ |
+      `Email <mailto:marslan@luc.edu>`__
 
-   .. dropdown:: PhD Students
-      :open:
+   .. grid-item-card::
+      :margin: 0
+      :class-card: team-card
 
-      .. grid:: 1 1 2 3
-         :gutter: 3
+      .. image:: ../_static/images/people/bhadauria.jpeg
+         :alt: Khushboo Bhadauria
+         :class: profile-photo
+         :width: 200px
 
-         .. grid-item-card::
-            :margin: 0
-            :text-align: center
-            :img-top: ../_static/images/people/bisharat.png
+      **Khushboo Bhadauria**
 
-            **Arslan Bisharat**
+      *M.S. Student, Computer Science, Loyola University Chicago*
 
-            *PhD Student*
+      `Email <mailto:kbhadauria@luc.edu>`__
 
-            LLM evaluation, formal methods, adversarial ML.
+   .. grid-item-card::
+      :margin: 0
+      :class-card: team-card
 
-            `Website <https://marslan.cs.luc.edu/>`__ |
-            `Email <mailto:marslan@luc.edu>`__
+      .. image:: ../_static/images/people/bsantos.png
+         :alt: Beatriz Santos
+         :class: profile-photo
+         :width: 200px
 
-   .. dropdown:: MS Students
-      :open:
+      **Beatriz Santos**
 
-      .. grid:: 1 1 2 3
-         :gutter: 3
+      *Undergraduate Student, Computer Science, Loyola University Chicago*
 
-         .. grid-item-card::
-            :margin: 0
-            :text-align: center
-            :img-top: ../_static/images/people/bhadauria.jpeg
+      `GitHub <https://github.com/beatriz-baquerizo>`__ |
+      `Email <mailto:bsantos3@luc.edu>`__
 
-            **Khushboo Bhadauria**
+   .. grid-item-card::
+      :margin: 0
+      :class-card: team-card
 
-            *MS Student*
+      .. image:: ../_static/images/people/ortiz.png
+         :alt: Brian Ortiz
+         :class: profile-photo
+         :width: 200px
 
-            `Email <mailto:kbhadauria@luc.edu>`__
+      **Brian Ortiz**
 
-         .. grid-item-card::
-            :margin: 0
-            :text-align: center
-            :img-top: ../_static/images/people/ortiz.png
+      *M.S. Computer Science, Loyola University Chicago*
 
-            **Brian Ortiz**
+      DevSecOps engineering and secure systems. USMC veteran.
 
-            *MS Student*
+      `GitHub <https://github.com/bortiz-101>`__ |
+      `Email <mailto:bortiz4@luc.edu>`__
 
-            `Email <mailto:bortiz4@luc.edu>`__
+   .. grid-item-card::
+      :margin: 0
+      :class-card: team-card
 
-   .. dropdown:: UG Students
-      :open:
+      .. image:: ../_static/images/people/spencer.png
+         :alt: Eric Spencer
+         :class: profile-photo
+         :width: 200px
 
-      .. grid:: 1 1 2 3
-         :gutter: 3
+      **Eric Spencer**
 
-         .. grid-item-card::
-            :margin: 0
-            :text-align: center
-            :img-top: ../_static/images/people/spencer.png
+      *B.S. Computer Science, Loyola University Chicago*
 
-            **Eric Spencer**
+      Mulcahy Scholar - supported by the Loyola University Chicago
+      College of Arts and Sciences Mulcahy Scholars Program under
+      the supervision of Prof. Konstantin Läufer.
 
-            *Undergraduate Researcher, Computer Science*
+      `Website <https://ericspencer.us>`__ |
+      `GitHub <https://github.com/EricSpencer00>`__ |
+      `Email <mailto:espencer2@luc.edu>`__
 
-            Mulcahy Scholar — supported by the Loyola University Chicago
-            College of Arts and Sciences Mulcahy Scholars Program under
-            the supervision of Prof. Konstantin Läufer.
+   .. grid-item-card::
+      :margin: 0
+      :class-card: team-card
 
-            `Website <https://ericspencer.us>`__ |
-            `Email <mailto:espencer2@luc.edu>`__
+      .. image:: ../_static/images/people/ramos.png
+         :alt: Anisa Ramos
+         :class: profile-photo
+         :width: 200px
 
-         .. grid-item-card::
-            :margin: 0
-            :text-align: center
-            :img-top: ../_static/images/people/ramos.png
+      **Anisa Ramos**
 
-            **Anisa Ramos**
+      *B.S. Computer Science, Loyola University Chicago*
 
-            *Undergraduate Researcher*
+      Joined Spring 2026.
 
-            `Email <mailto:anisapr14@gmail.com>`__
-
-   .. dropdown:: Interns
-      :open:
-
-      No current interns. Interested? See :doc:`Get Involved <prospective-students>`.
-
-
-Previous Members
-----------------
-
-.. note::
-   To be added.
+      `GitHub <https://github.com/Anisa098>`__

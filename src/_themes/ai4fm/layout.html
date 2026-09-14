@@ -1,0 +1,112 @@
+{% extends "basic/layout.html" %}
+{% block extrahead %}
+<link rel="stylesheet" href="https://www.luc.edu/media/lucedu/styleassets/antenna-terminal-four.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap">
+{% if pagename == 'index' %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script defer src="{{ pathto('_static/js/home-carousel.js', 1) }}"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "AI4FM",
+  "alternateName": "AI for Formal Methods",
+  "url": "https://ai4fm.cs.luc.edu/",
+  "logo": "https://ai4fm.cs.luc.edu/_static/images/logo-light.png",
+  "parentOrganization": {
+    "@type": "CollegeOrUniversity",
+    "name": "Loyola University Chicago",
+    "url": "https://www.luc.edu/"
+  },
+  "sameAs": ["https://github.com/LUC-AI4FM"]
+}
+</script>
+{% endif %}
+{% endblock %}
+{% block body_tag %}<body class="{% if pagename == 'index' %}homepage{% else %}inner-page{% if pagename == 'pages/people' %} team-page{% endif %}{% endif %}">{% endblock %}
+{% block header %}
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="wordmark" href="{{ pathto('index') }}" aria-label="AI4FM home">ai4fm <span aria-hidden="true">@</span> <img src="https://pxl-lucedu.terminalfour.net/prod01/cdn/media/luc-redesign-2026/images/Loyola-University-Chicago-white.svg" alt="luc.edu" width="154" height="32"></a>
+    <nav aria-label="Main navigation">
+      {% for label, page in [('Publications', 'papers/index'), ('Updates', 'posts/index'), ('Team', 'pages/people'), ('Software and Datasets', 'pages/software'), ('About', 'pages/about')] %}
+      <a href="{{ pathto(page) }}"{% if pagename == page or (page == 'papers/index' and pagename.startswith('papers/')) or (page == 'posts/index' and pagename.startswith('posts/')) %} aria-current="page"{% endif %}>{{ label }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>
+{% endblock %}
+{% block relbar1 %}{% endblock %}
+{% block relbar2 %}{% endblock %}
+{% block content %}
+{% if pagename == 'index' %}
+<main role="main" id="main" class="home-main">
+  <section class="home-hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1>AI for Formal Methods</h1>
+        <p class="hero-dek">Loyola University Chicago’s research lab exploring the intersection of artificial intelligence and formal methods in software engineering. Established 2025.</p>
+      </div>
+      <section class="hero-carousel splide" aria-hidden="true">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img src="{{ pathto('_static/images/gsirs-2026-brian-poster.png', 1) }}" alt="" width="600" height="800" fetchpriority="high">
+            </li>
+            <li class="splide__slide">
+              <img src="{{ pathto('_static/images/eric-chattla-presentation-2026.png', 1) }}" alt="" width="740" height="968" loading="lazy">
+            </li>
+            <li class="splide__slide">
+              <img src="{{ pathto('_static/images/gcasr-2025-brian-poster.jpeg', 1) }}" alt="" width="1024" height="771" loading="lazy">
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </section>
+  <div class="home-columns site-width">
+    <section class="research-list" aria-labelledby="research-heading"><h2 id="research-heading">Publications</h2>
+      {% for paper in research_pages[:5] %}
+      <article class="research-entry">
+        {% if paper.status %}<p class="entry-meta">{{ paper.status }}{% if paper.venue %} · {{ paper.venue }}{% endif %}</p>{% endif %}
+        <h3><a href="{{ pathto(paper.docname) }}">{{ paper.title }}</a></h3>
+        {% if paper.authors %}<p class="entry-authors">{{ paper.authors }}</p>{% endif %}
+      </article>
+      {% endfor %}
+      <a class="read-more" href="{{ pathto('papers/index') }}">Read more <span aria-hidden="true">›</span></a>
+    </section>
+    <section class="news-list" aria-labelledby="news-heading"><h2 id="news-heading">Updates</h2>
+      {% for post in news_pages[:7] %}
+      <article class="news-entry"><time datetime="{{ post.iso_date }}">{{ post.date }}</time><h3><a href="{{ pathto(post.docname) }}">{{ post.title }}</a></h3></article>
+      {% endfor %}
+      <a class="read-more" href="{{ pathto('posts/index') }}">Read more <span aria-hidden="true">›</span></a>
+    </section>
+  </div>
+  <div class="home-bottom site-width">
+    <section class="home-bottom-entry">
+      <h2><a href="{{ pathto('pages/about') }}">About</a></h2>
+      <p>Meet the lab, our research focus, and the Loyola community behind AI4FM.</p>
+    </section>
+    <section class="home-bottom-entry">
+      <h2><a href="{{ pathto('pages/prospective-students') }}">Get Involved</a></h2>
+      <p>Find ways to contribute, collaborate, or join us as a student researcher.</p>
+    </section>
+  </div>
+</main>
+{% else %}
+<div class="page-layout site-width">
+  <main role="main" id="main" class="article-body">
+    <div class="breadcrumbs"><a href="{{ pathto('index') }}">ai4fm</a><span aria-hidden="true"> / </span>{% if pagename.startswith('papers/') and pagename != 'papers/index' %}<a href="{{ pathto('papers/index') }}">Publications</a>{% elif pagename.startswith('posts/') and pagename != 'posts/index' %}<a href="{{ pathto('posts/index') }}">Updates</a>{% else %}<span>{{ title|striptags }}</span>{% endif %}</div>
+    {% block body %}{{ body }}{% endblock %}
+  </main>
+  {% if display_toc and pagename != 'search' %}<aside class="page-toc" aria-label="On this page">{{ toc }}</aside>{% endif %}
+</div>
+{% endif %}
+{% endblock %}
+{% block footer %}
+<footer class="site-footer"><div class="footer-inner site-width"><a class="footer-logo" href="{{ pathto('index') }}" aria-label="AI4FM home"><img src="{{ pathto('_static/images/logo-dark.png', 1) }}" alt="AI4FM" width="1080" height="1080"></a><nav aria-label="Footer"><a href="https://www.luc.edu/">Loyola University Chicago</a><a href="{{ pathto('pages/funding') }}">Funding</a><a href="https://github.com/LUC-AI4FM">GitHub</a></nav></div></footer>
+{% endblock %}

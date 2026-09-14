@@ -5,7 +5,7 @@
 {% if pagename in ablog %}
 {% set post = ablog[pagename] %}
 {% if post.author %}
-<div class="ablog-post-meta" style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--color-background-border, #e0e0e0); color: var(--color-foreground-muted, #6c757d); font-size: 0.9rem;">
+<div class="ablog-post-meta">
   {% for author in post.author %}
     {%- set ns = namespace(url=None) %}
     {%- for key, info in ablog.blog_authors.items() %}
@@ -15,9 +15,9 @@
     {%- endfor %}
     Authored by
     {% if ns.url %}
-      <a href="{{ ns.url }}" style="color: inherit;">{{ author }}</a>
+      <a href="{{ ns.url }}">{{ author }}</a>
     {% else %}
-      <a href="{{ pathto(author.docname) }}" style="color: inherit;">{{ author }}</a>
+      <a href="{{ pathto(author.docname) }}">{{ author }}</a>
     {% endif %}
     {% if not loop.last %}, {% endif %}
   {% endfor %}

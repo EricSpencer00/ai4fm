@@ -1,10 +1,10 @@
-TLA+ for All: Running Model Checking in a Python Notebook
-=========================================================
+TLA+ for All: Model Checking in a Python Notebook
+==================================================
 
-:Status: Published
+:Status: Preprint
 :Venue: figshare, February 2025
 :Authors: Konstantin Laufer, George K. Thiruvathukal
-:DOI / PDF: `10.6084/m9.figshare.28376276.v1 <http://dx.doi.org/10.6084/m9.figshare.28376276.v1>`__
+:DOI / PDF: `10.6084/m9.figshare.28376276.v1 <https://doi.org/10.6084/m9.figshare.28376276.v1>`__
 
 
 Overview
@@ -76,6 +76,6 @@ Citation
 --------
 
 Konstantin Laufer and George K. Thiruvathukal,
-*TLA for All: Model Checking in a Python Notebook*,
+*TLA+ for All: Model Checking in a Python Notebook*,
 figshare, February 2025.
-http://dx.doi.org/10.6084/m9.figshare.28376276.v1
+https://doi.org/10.6084/m9.figshare.28376276.v1

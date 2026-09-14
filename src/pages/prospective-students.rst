@@ -23,7 +23,7 @@ Joining as a Student Researcher
 
 If you are a student at Loyola University Chicago interested in joining AI4FM:
 
-- Read through our :doc:`projects <works>` and :doc:`recent updates <../posts/index>` to understand our current work.
+- Read through our :doc:`projects <software>` and :doc:`recent updates <../posts/index>` to understand our current work.
 - Come prepared to discuss which projects align with your interests and how you can contribute.
 - Reach out to the relevant faculty member through the
   `Loyola CS Department directory <https://www.luc.edu/cs/aboutus/people/>`__.

@@ -2,9 +2,10 @@ Large Language Models (LLM) and Temporal Logic of Actions (TLA): How Effective a
 ===================================================================================================================
 
 :Status: Presented
-:Venue: GSIRS 2026 — Graduate School Interdisciplinary Research Symposium, April 11, 2026, Loyola University Chicago
+:Venue: GSIRS 2026 - Graduate School Interdisciplinary Research Symposium, April 11, 2026, Loyola University Chicago
 :Authors: Brian Ortiz, Arslan Bisharat, Mohammed Abuhamad, Konstantin Läufer, Eric Spencer, Khushboo Bhadauria, George K. Thiruvathukal, TaiNing Wang
 :Institution: Loyola University Chicago
+:DOI / Poster: `10.6084/m9.figshare.31988706.v1 <https://doi.org/10.6084/m9.figshare.31988706.v1>`__
 
 
 Abstract
@@ -29,7 +30,8 @@ language training.
 Based On
 --------
 
-This poster is based on the paper `Can LLMs Write Correct TLA+ Specifications? Evaluating Natural-Language-to-TLA+ Generation <llm-tla-evaluation/>`__, currently under submission.
+This poster is based on the :doc:`published ICSOFT 2026 paper
+<../papers/llm-tla-evaluation>`.
 
 
 Citation
@@ -39,3 +41,4 @@ Brian Ortiz, Arslan Bisharat, Mohammed Abuhamad, Konstantin Läufer, Eric Spence
 Khushboo Bhadauria, George K. Thiruvathukal, and TaiNing Wang,
 *Large Language Models (LLM) and Temporal Logic of Actions (TLA): How Effective are LLMs for Verification Systems*,
 GSIRS 2026, April 11, 2026.
+https://doi.org/10.6084/m9.figshare.31988706.v1

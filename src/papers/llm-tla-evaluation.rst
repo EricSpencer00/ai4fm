@@ -1,12 +1,11 @@
-Can LLMs Write Correct TLA+ Specifications?
-============================================
+Can LLMs Write Correct TLA+ Specifications? Evaluating Natural-Language-to-TLA+ Generation
+============================================================================================
 
-Evaluating Natural-Language-to-TLA+ Generation
-
-:Status: Under Submission
-:Venue: To be announced
-:Authors: Anonymous (AI4FM, Loyola University Chicago)
-:DOI / PDF: Available upon publication
+:Status: Published
+:Venue: ICSOFT 2026 — 21st International Conference on Software Technologies, Porto, Portugal, July 16–18, 2026, pp. 39–50
+:Authors: Arslan Bisharat, Brian Ortiz, Eric Spencer, Khushboo Bhadauria, TaiNing Wang, George K. Thiruvathukal, Konstantin Läufer, Mohammed Abuhamad
+:DOI / PDF: `10.5220/0015070400004088 <https://doi.org/10.5220/0015070400004088>`__ | `View published PDF <https://www.scitepress.org/PublishedPapers/2026/150704/150704.pdf>`__
+:Google Scholar: `Citation record <https://scholar.google.com/scholar?cites=12293285851106374401&as_sdt=400005&sciodt=0,14&hl=en>`__
 
 
 Abstract
@@ -75,5 +74,8 @@ and evaluation-driven prompting strategies - all active directions for AI4FM.
 Citation
 --------
 
-.. note::
-   Full citation will be available upon publication. The paper is currently under submission.
+Arslan Bisharat, Brian Ortiz, Eric Spencer, Khushboo Bhadauria, TaiNing Wang,
+George K. Thiruvathukal, Konstantin Läufer, and Mohammed Abuhamad,
+*Can LLMs Write Correct TLA+ Specifications? Evaluating Natural-Language-to-TLA+
+Generation*, Proceedings of the 21st International Conference on Software Technologies
+(ICSOFT 2026), pp. 39–50, 2026. https://doi.org/10.5220/0015070400004088

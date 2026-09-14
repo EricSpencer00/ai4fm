@@ -1,68 +1,50 @@
 # AI4FM Website
 
-> Source for [ai4fm.cs.luc.edu](https://ai4fm.cs.luc.edu) — the AI for Formal Methods research group at Loyola University Chicago.
+Source for [ai4fm.cs.luc.edu](https://ai4fm.cs.luc.edu), the AI for Formal Methods research group at Loyola University Chicago.
 
-## Table of Contents
+## Local development
 
-- [AI4FM Website](#ai4fm-website)
-  - [Table of Contents](#table-of-contents)
-  - [About](#about)
-  - [Getting Started](#getting-started)
-    - [Requirements](#requirements)
-    - [Creating The Dev Environment](#creating-the-dev-environment)
-    - [Building The Sphinx Site](#building-the-sphinx-site)
-    - [Serving The Sphinx Site](#serving-the-sphinx-site)
-  - [Hosting On GitHub Pages](#hosting-on-github-pages)
+Requires Python 3.13 and [uv](https://docs.astral.sh/uv/).
 
-## About
-
-This is a template repository that is intended to be inherited by other template
-repositories *to ensure consistent common tool deployment Sphinx projects*.
-
-Additionally, while projects can leverage this template or its content,
-extending this template is encouraged.
-
-## Getting Started
-
-### Requirements
-
-This template is dependent upon Python 3.13 and `uv`.
-
-It is recommended to install `pre-commit` as well for per-commit formatting and
-linting checks.
-
-### Creating The Dev Environment
-
-`make create-dev`
-
-### Building The Sphinx Site
-
-`make build_project`
-
-### Serving The Sphinx Site
-
-`make serve`
-
-## Hosting On GitHub Pages
-
-Any time that a commit is pushed to GitHub from the `main` branch, the
-[`build.yml`](.github/workflows/build.yml) workflow is executed which builds the
-project and deploys it to GitHub Pages.
-
-You will need to modify the ReStructured Text directory in the
-[`build.yml`](.github/workflows/build.yml) from `template_sphinx` to the name of
-your project's directory. You can find the line to modify by searching for
-`# TODO` in the [`build.yml`](.github/workflows/build.yml) file. An example of
-what to look for is this code block:
-
-```yaml
-- name: Build the site
-  run: |
-    ./.venv/bin/sphinx-build --write-all template_sphinx build
-    # TODO: Change `template_sphinx` to the source directory
+```sh
+uv sync
+make build-site
+make serve
 ```
 
-You can also deploy the project from the `main` branch at any time (so long as
-the `workflow_dispatch` event is included in the
-[`build.yml`](.github/workflows/build.yml) file) from the GitHub Actions page
+The preview is served at http://127.0.0.1:8000. Both local development and GitHub Pages use Sphinx's `dirhtml` builder so page URLs stay consistent.
 
+## Content
+
+- `src/papers/`: one source file per paper, presentation, poster, or artifact. Keep the existing title and `Status`, `Venue`, `Authors`, and `DOI / PDF` fields. Each source becomes its own page.
+- `src/posts/`: one source file per news post. Use the existing `blogpost`, `date` (for example `June 5, 2026`), `author`, `category`, and `tags` fields.
+- `src/pages/`: team, software, about, funding, and participation pages.
+
+The homepage discovers every paper and news post at build time. News is sorted newest first. Research follows the order in `src/papers/index.rst`, with new unlisted papers appended automatically. The homepage lists existing titles and metadata without generating copy.
+
+Use Sphinx `:doc:` links for internal pages and `:download:` links for downloadable files; these survive changes in page depth and news excerpts.
+
+## Design
+
+`src/_themes/ai4fm/` contains the shared layout and stylesheet. The theme uses the selected maroon-and-paper design, the compact `ai4fm @ luc.edu` header, the Computer Science site's Open Sans and Antenna heading stack, and 100 ms hover feedback. Reduced-motion preferences disable transitions. Fonts have local fallbacks.
+
+The root `index.html` opens the generated homepage after a build. Use `make serve` to browse the complete site locally.
+
+## Verification
+
+```sh
+make check-site
+```
+
+This builds with warnings treated as errors and checks generated internal links and
+anchors, copied visual assets, shared page structure, and complete homepage coverage
+of papers and news.
+
+SEO metadata, canonical URLs, the sitemap, and `robots.txt` are generated with the
+site. The check also confirms that every public source page is represented exactly
+once in the sitemap and has one concise description; the CI deployment uses the
+same check before publishing.
+
+## Deployment
+
+The existing GitHub Actions workflow builds and deploys `build/` to GitHub Pages when changes are pushed to `main`, or when the workflow is run manually. Local previewing does not publish changes.
