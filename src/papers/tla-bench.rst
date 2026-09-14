@@ -1,5 +1,5 @@
 TLA+-Bench: An Execution-Grounded Benchmark and Dataset for Natural-Language to TLA+ Specification Generation
-============================================================================================================
+=============================================================================================================
 
 *Preprint / Under review*
 
