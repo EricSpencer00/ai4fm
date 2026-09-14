@@ -76,6 +76,7 @@ html_static_path = ["_static"]
 html_extra_path = ["CNAME", "favicon.ico", "robots.txt"]
 html_css_files = []
 SITE_BASE_URL = os.environ.get("AI4FM_BASE_URL", "https://ai4fm.cs.luc.edu/")
+blog_baseurl = SITE_BASE_URL
 html_baseurl = SITE_BASE_URL
 html_favicon = "_static/images/logo-dark.png"
 html_context = {"site_base_url": SITE_BASE_URL}

@@ -125,31 +125,70 @@ a:visited{color:var(--maroon)}.site-header .wordmark:visited,.site-header nav a:
   max-width: none;
   margin: 0;
   padding: 0;
+  display: block;
   background: var(--maroon);
   border-top: none;
 }
 .footer-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  padding-top: 28px;
-  padding-bottom: 28px;
+  display: grid;
+  grid-template-columns: minmax(190px, 1.35fr) repeat(3, minmax(130px, 1fr));
+  gap: clamp(28px, 5vw, 72px);
+  align-items: start;
+  padding-top: 44px;
+  padding-bottom: 42px;
 }
-.footer-logo { display: block; flex-shrink: 0; }
+.footer-brand { max-width: 260px; }
+.footer-logo { display: block; width: max-content; }
 .footer-logo img {
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 82px;
+  height: 82px;
   object-fit: contain;
   filter: brightness(0) invert(1);
 }
+.footer-tagline {
+  color: var(--paper);
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.25;
+  margin: 18px 0 12px;
+}
+.footer-address { color: oklch(.88 .02 75); font-size: 11px; line-height: 1.65; margin: 0; }
+.footer-address a { color: inherit; text-decoration: none; }
+.footer-heading {
+  color: var(--gold);
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  line-height: 1.2;
+  margin: 3px 0 15px;
+  text-transform: uppercase;
+}
+.site-footer nav { display: flex; flex-direction: column; align-items: flex-start; gap: 9px; }
 .site-footer nav a, .site-footer nav a:visited { color: var(--paper); }
+.site-footer nav a { font-size: 11px; line-height: 1.35; text-decoration: none; }
 .site-footer nav a:hover { color: var(--gold); }
+.footer-social { display: inline-flex; align-items: center; gap: 8px; }
+.footer-icon { width: 15px; height: 15px; flex: 0 0 15px; }
+.footer-legal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-top: 1px solid oklch(.9 .02 75 / .24);
+  color: oklch(.82 .02 75);
+  font-size: 10px;
+  padding-top: 17px;
+  padding-bottom: 18px;
+}
+.footer-legal p { margin: 0; }
+.footer-legal nav { flex-direction: row; gap: 18px; }
 @media (max-width: 520px) {
-  .footer-inner { align-items: flex-start; gap: 25px; }
-  .footer-logo img { width: 80px; height: 80px; }
-  .site-footer nav { flex-direction: column; gap: 10px; padding-top: 8px; }
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 34px 24px; padding-top: 34px; padding-bottom: 34px; }
+  .footer-brand { grid-column: 1 / -1; max-width: 280px; }
+  .footer-logo img { width: 74px; height: 74px; }
+  .footer-legal { flex-direction: column; align-items: flex-start; gap: 10px; }
 }
 /* Use the same square portrait size for faculty and students. */
 .article-body img.profile-photo,
