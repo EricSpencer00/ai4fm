@@ -1,6 +1,6 @@
 # AI4FM Website
 
-Source for [ericspencer.us](https://ericspencer.us), the AI for Formal Methods research group at Loyola University Chicago.
+Source for [ai4fm.cs.luc.edu](https://ai4fm.cs.luc.edu), the AI for Formal Methods research group at Loyola University Chicago.
 
 ## Local development
 

@@ -14,6 +14,7 @@ Copyright (C) 2025 George K. Thiruvathukal.
 
 import datetime
 import html
+import os
 import re
 from operator import itemgetter
 from pathlib import Path
@@ -74,8 +75,10 @@ html_theme_path = ["_themes"]
 html_static_path = ["_static"]
 html_extra_path = ["CNAME", "favicon.ico", "robots.txt"]
 html_css_files = []
-html_baseurl = "https://ericspencer.us/"
+SITE_BASE_URL = os.environ.get("AI4FM_BASE_URL", "https://ai4fm.cs.luc.edu/")
+html_baseurl = SITE_BASE_URL
 html_favicon = "_static/images/logo-dark.png"
+html_context = {"site_base_url": SITE_BASE_URL}
 
 html_theme_options = {}
 html_sidebars = {"**": []}
@@ -88,8 +91,8 @@ sitemap_url_scheme = "{link}"
 sitemap_excludes = ["blog/", "blog/**", "genindex/", "search/"]
 
 # OpenGraph / social preview tags
-ogp_site_url = "https://ericspencer.us/"
-ogp_image = "https://ericspencer.us/_static/images/logo-light.png"
+ogp_site_url = SITE_BASE_URL
+ogp_image = f"{SITE_BASE_URL}_static/images/logo-light.png"
 ogp_description_length = 200
 ogp_type = "website"
 ogp_custom_meta_tags = [

@@ -4,6 +4,7 @@ Check generated links and automatic homepage coverage.
 Copyright (C) 2026 AI4FM Research Group.
 """
 
+import os
 import re
 import sys
 from json import JSONDecodeError, loads
@@ -11,7 +12,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
-SITE_URL = "https://ericspencer.us/"
+SITE_URL = os.environ.get("AI4FM_BASE_URL", "https://ai4fm.cs.luc.edu/")
 NOINDEX_PREFIXES = ("blog", "genindex", "search")
 MAX_DESCRIPTION_LENGTH = 160
 SITEMAP_LOC_RE = re.compile(r"<loc>([^<]+)</loc>")
