@@ -1,8 +1,7 @@
 {% extends "basic/layout.html" %}
 {% block extrahead %}
+<script defer src="{{ pathto('_static/js/site-nav.js', 1) }}"></script>
 {% if pagename == 'index' %}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css">
-<script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 <script defer src="{{ pathto('_static/js/home-carousel.js', 1) }}"></script>
 <script type="application/ld+json">
 {
@@ -28,7 +27,11 @@
 <header class="site-header">
   <div class="header-inner">
     <a class="wordmark" href="{{ pathto('index') }}" aria-label="AI4FM home">ai4fm <span aria-hidden="true">@</span> <img src="https://pxl-lucedu.terminalfour.net/prod01/cdn/media/luc-redesign-2026/images/Loyola-University-Chicago-white.svg" alt="luc.edu" width="154" height="32"></a>
-    <nav aria-label="Main navigation">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+      <span class="nav-toggle-label">Menu</span>
+      <span class="nav-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+    <nav id="site-navigation" aria-label="Main navigation">
       {% for label, page in [('Publications', 'papers/index'), ('Updates', 'posts/index'), ('Team', 'pages/people'), ('Software and Datasets', 'pages/software'), ('About', 'pages/about')] %}
       <a href="{{ pathto(page) }}"{% if pagename == page or (page == 'papers/index' and pagename.startswith('papers/')) or (page == 'posts/index' and pagename.startswith('posts/')) %} aria-current="page"{% endif %}>{{ label }}</a>
       {% endfor %}
@@ -47,16 +50,16 @@
         <h1>AI for Formal Methods</h1>
         <p class="hero-dek">Loyola University Chicago’s research lab exploring the intersection of artificial intelligence and formal methods in software engineering. Established 2025.</p>
       </div>
-      <section class="hero-carousel splide" aria-hidden="true">
-        <div class="splide__track">
-          <ul class="splide__list">
-            <li class="splide__slide">
+      <section class="hero-carousel" aria-hidden="true">
+        <div class="hero-carousel__viewport">
+          <ul class="hero-carousel__track">
+            <li class="hero-carousel__slide is-active">
               <img src="{{ pathto('_static/images/gsirs-2026-brian-poster.png', 1) }}" alt="" width="600" height="800" fetchpriority="high">
             </li>
-            <li class="splide__slide">
+            <li class="hero-carousel__slide">
               <img src="{{ pathto('_static/images/eric-chattla-presentation-2026.png', 1) }}" alt="" width="740" height="968" loading="lazy">
             </li>
-            <li class="splide__slide">
+            <li class="hero-carousel__slide">
               <img src="{{ pathto('_static/images/gcasr-2025-brian-poster.jpeg', 1) }}" alt="" width="1024" height="771" loading="lazy">
             </li>
           </ul>
@@ -65,20 +68,23 @@
     </div>
   </section>
   <div class="home-columns site-width">
-    <section class="research-list" aria-labelledby="research-heading"><h2 id="research-heading">Publications</h2>
-      {% for paper in research_pages[:5] %}
-      <article class="research-entry">
-        {% if paper.status %}<p class="entry-meta">{{ paper.status }}{% if paper.venue %} · {{ paper.venue }}{% endif %}</p>{% endif %}
+    <section class="home-section research-list" aria-labelledby="research-heading"><h2 id="research-heading">Publications</h2>
+      <div class="home-card-grid home-card-grid--publications">
+      {% for paper in research_pages[:3] %}
+      <article class="home-card publication-card">
         <h3><a href="{{ pathto(paper.docname) }}">{{ paper.title }}</a></h3>
         {% if paper.authors %}<p class="entry-authors">{{ paper.authors }}</p>{% endif %}
       </article>
       {% endfor %}
+      </div>
       <a class="read-more" href="{{ pathto('papers/index') }}">Read more <span aria-hidden="true">›</span></a>
     </section>
-    <section class="news-list" aria-labelledby="news-heading"><h2 id="news-heading">Updates</h2>
-      {% for post in news_pages[:7] %}
-      <article class="news-entry"><time datetime="{{ post.iso_date }}">{{ post.date }}</time><h3><a href="{{ pathto(post.docname) }}">{{ post.title }}</a></h3></article>
+    <section class="home-section news-list" aria-labelledby="news-heading"><h2 id="news-heading">Updates</h2>
+      <div class="home-card-grid home-card-grid--updates">
+      {% for post in news_pages[:3] %}
+      <article class="home-card update-card"><time datetime="{{ post.iso_date }}">{{ post.date }}</time><h3><a href="{{ pathto(post.docname) }}">{{ post.title }}</a></h3></article>
       {% endfor %}
+      </div>
       <a class="read-more" href="{{ pathto('posts/index') }}">Read more <span aria-hidden="true">›</span></a>
     </section>
   </div>
