@@ -248,8 +248,29 @@ h2 {
   letter-spacing: 0;
 }
 
-/* Match the Computer Science site: condensed black for primary headings. */
+/* Match Loyola Computer Science's typography exactly. */
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Antenna Bold', Arial, sans-serif;
+}
+
 h1,
 .hero-inner h1 {
-  font-family: 'Antenna Condensed Black', 'Antenna Condensed Bold', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Antenna Condensed Black', Arial, sans-serif;
+}
+
+.wordmark {
+  font-family: 'Antenna Condensed Bold', Arial, sans-serif;
+}
+
+.footer-tagline,
+.article-body .sd-card-title,
+.article-body .team-text-col strong {
+  font-family: 'Antenna Bold', Arial, sans-serif;
 }
