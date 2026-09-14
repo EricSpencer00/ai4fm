@@ -74,7 +74,7 @@ html_theme_path = ["_themes"]
 html_static_path = ["_static"]
 html_extra_path = ["CNAME", "favicon.ico", "robots.txt"]
 html_css_files = []
-html_baseurl = "https://ai4fm.cs.luc.edu/"
+html_baseurl = "https://ericspencer.us/"
 html_favicon = "_static/images/logo-dark.png"
 
 html_theme_options = {}
@@ -88,8 +88,8 @@ sitemap_url_scheme = "{link}"
 sitemap_excludes = ["blog/", "blog/**", "genindex/", "search/"]
 
 # OpenGraph / social preview tags
-ogp_site_url = "https://ai4fm.cs.luc.edu/"
-ogp_image = "https://ai4fm.cs.luc.edu/_static/images/logo-light.png"
+ogp_site_url = "https://ericspencer.us/"
+ogp_image = "https://ericspencer.us/_static/images/logo-light.png"
 ogp_description_length = 200
 ogp_type = "website"
 ogp_custom_meta_tags = [

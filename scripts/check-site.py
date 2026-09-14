@@ -11,7 +11,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
-SITE_URL = "https://ai4fm.cs.luc.edu/"
+SITE_URL = "https://ericspencer.us/"
 NOINDEX_PREFIXES = ("blog", "genindex", "search")
 MAX_DESCRIPTION_LENGTH = 160
 SITEMAP_LOC_RE = re.compile(r"<loc>([^<]+)</loc>")
