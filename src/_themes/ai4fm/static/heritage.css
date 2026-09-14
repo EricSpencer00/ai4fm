@@ -96,7 +96,7 @@ a:visited{color:var(--maroon)}.site-header .wordmark:visited,.site-header nav a:
 }
 @media (max-width: 520px) {
   .hero-inner { gap: 23px; padding: 22px 0 30px; }
-  .hero-inner h1 { font-size: clamp(29px, 8.6vw, 36px); }
+  .hero-inner h1 { font-size: clamp(29px, 8.6vw, 36px); white-space: normal; }
   .home-hero .hero-dek { max-width: 42ch; }
   .hero-carousel { width: 100%; height: auto; transform: none; }
   .hero-carousel .splide__track,
